@@ -12,7 +12,13 @@ import org.springframework.stereotype.Service;
 public class JokeServiceImpl implements JokeService {
 // ------------------------------ FIELDS ------------------------------
 
-    private ChuckNorrisQuotes chuckNorrisQuotes = new ChuckNorrisQuotes();
+    private ChuckNorrisQuotes chuckNorrisQuotes;
+
+// --------------------------- CONSTRUCTORS ---------------------------
+
+    public JokeServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
+    }
 
 // ------------------------ INTERFACE METHODS ------------------------
 
